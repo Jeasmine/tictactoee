@@ -1,0 +1,309 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		800240E81ED30DC200B2106A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800240E71ED30DC200B2106A /* AppDelegate.swift */; };
+		800240EA1ED30DC200B2106A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800240E91ED30DC200B2106A /* ViewController.swift */; };
+		800240ED1ED30DC200B2106A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 800240EB1ED30DC200B2106A /* Main.storyboard */; };
+		800240EF1ED30DC200B2106A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 800240EE1ED30DC200B2106A /* Assets.xcassets */; };
+		800240F21ED30DC200B2106A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 800240F01ED30DC200B2106A /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		800240E41ED30DC200B2106A /* TaTeTi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaTeTi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		800240E71ED30DC200B2106A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		800240E91ED30DC200B2106A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		800240EC1ED30DC200B2106A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		800240EE1ED30DC200B2106A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		800240F11ED30DC200B2106A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		800240F31ED30DC200B2106A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		800240E11ED30DC200B2106A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		800240DB1ED30DC200B2106A = {
+			isa = PBXGroup;
+			children = (
+				800240E61ED30DC200B2106A /* TaTeTi */,
+				800240E51ED30DC200B2106A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		800240E51ED30DC200B2106A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				800240E41ED30DC200B2106A /* TaTeTi.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		800240E61ED30DC200B2106A /* TaTeTi */ = {
+			isa = PBXGroup;
+			children = (
+				800240E71ED30DC200B2106A /* AppDelegate.swift */,
+				800240E91ED30DC200B2106A /* ViewController.swift */,
+				800240EB1ED30DC200B2106A /* Main.storyboard */,
+				800240EE1ED30DC200B2106A /* Assets.xcassets */,
+				800240F01ED30DC200B2106A /* LaunchScreen.storyboard */,
+				800240F31ED30DC200B2106A /* Info.plist */,
+			);
+			path = TaTeTi;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		800240E31ED30DC200B2106A /* TaTeTi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 800240F61ED30DC200B2106A /* Build configuration list for PBXNativeTarget "TaTeTi" */;
+			buildPhases = (
+				800240E01ED30DC200B2106A /* Sources */,
+				800240E11ED30DC200B2106A /* Frameworks */,
+				800240E21ED30DC200B2106A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TaTeTi;
+			productName = TaTeTi;
+			productReference = 800240E41ED30DC200B2106A /* TaTeTi.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		800240DC1ED30DC200B2106A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = workshop;
+				TargetAttributes = {
+					800240E31ED30DC200B2106A = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = ZYXCB6QKKT;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 800240DF1ED30DC200B2106A /* Build configuration list for PBXProject "TaTeTi" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 800240DB1ED30DC200B2106A;
+			productRefGroup = 800240E51ED30DC200B2106A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				800240E31ED30DC200B2106A /* TaTeTi */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		800240E21ED30DC200B2106A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				800240F21ED30DC200B2106A /* LaunchScreen.storyboard in Resources */,
+				800240EF1ED30DC200B2106A /* Assets.xcassets in Resources */,
+				800240ED1ED30DC200B2106A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		800240E01ED30DC200B2106A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				800240EA1ED30DC200B2106A /* ViewController.swift in Sources */,
+				800240E81ED30DC200B2106A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		800240EB1ED30DC200B2106A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				800240EC1ED30DC200B2106A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		800240F01ED30DC200B2106A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				800240F11ED30DC200B2106A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		800240F41ED30DC200B2106A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		800240F51ED30DC200B2106A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		800240F71ED30DC200B2106A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZYXCB6QKKT;
+				INFOPLIST_FILE = TaTeTi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.workshop.jeasmine.ios.TaTeTi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		800240F81ED30DC200B2106A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZYXCB6QKKT;
+				INFOPLIST_FILE = TaTeTi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.workshop.jeasmine.ios.TaTeTi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		800240DF1ED30DC200B2106A /* Build configuration list for PBXProject "TaTeTi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				800240F41ED30DC200B2106A /* Debug */,
+				800240F51ED30DC200B2106A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		800240F61ED30DC200B2106A /* Build configuration list for PBXNativeTarget "TaTeTi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				800240F71ED30DC200B2106A /* Debug */,
+				800240F81ED30DC200B2106A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 800240DC1ED30DC200B2106A /* Project object */;
+}
