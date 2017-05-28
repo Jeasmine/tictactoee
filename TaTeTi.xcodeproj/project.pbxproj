@@ -12,6 +12,7 @@
 		800240ED1ED30DC200B2106A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 800240EB1ED30DC200B2106A /* Main.storyboard */; };
 		800240EF1ED30DC200B2106A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 800240EE1ED30DC200B2106A /* Assets.xcassets */; };
 		800240F21ED30DC200B2106A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 800240F01ED30DC200B2106A /* LaunchScreen.storyboard */; };
+		80CDD29F1EDB6BC000612639 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CDD29E1EDB6BC000612639 /* Enums.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		800240EE1ED30DC200B2106A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		800240F11ED30DC200B2106A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		800240F31ED30DC200B2106A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80CDD29E1EDB6BC000612639 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,31 @@
 		800240E61ED30DC200B2106A /* TaTeTi */ = {
 			isa = PBXGroup;
 			children = (
-				800240E71ED30DC200B2106A /* AppDelegate.swift */,
+				80CDD29D1EDB6B9600612639 /* Utils */,
+				80CDD2A01EDB6C0000612639 /* Commons */,
 				800240E91ED30DC200B2106A /* ViewController.swift */,
 				800240EB1ED30DC200B2106A /* Main.storyboard */,
+			);
+			path = TaTeTi;
+			sourceTree = "<group>";
+		};
+		80CDD29D1EDB6B9600612639 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				80CDD29E1EDB6BC000612639 /* Enums.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		80CDD2A01EDB6C0000612639 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				800240E71ED30DC200B2106A /* AppDelegate.swift */,
 				800240EE1ED30DC200B2106A /* Assets.xcassets */,
 				800240F01ED30DC200B2106A /* LaunchScreen.storyboard */,
 				800240F31ED30DC200B2106A /* Info.plist */,
 			);
-			path = TaTeTi;
+			name = Commons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				800240EA1ED30DC200B2106A /* ViewController.swift in Sources */,
+				80CDD29F1EDB6BC000612639 /* Enums.swift in Sources */,
 				800240E81ED30DC200B2106A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +322,7 @@
 				800240F81ED30DC200B2106A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
