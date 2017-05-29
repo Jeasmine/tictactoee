@@ -1,0 +1,15 @@
+PODS:
+  - DZNEmptyDataSet (1.8.1)
+  - SwiftMessages (3.1.5)
+
+DEPENDENCIES:
+  - DZNEmptyDataSet (~> 1.8.1)
+  - SwiftMessages (~> 3.1.5)
+
+SPEC CHECKSUMS:
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  SwiftMessages: bb85d7c30e85256f9367214b0907e1f409e1870a
+
+PODFILE CHECKSUM: 43ba39bcae4bc4bdb428557ebb2e49b7bbe1811e
+
+COCOAPODS: 1.2.1

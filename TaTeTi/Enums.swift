@@ -19,21 +19,20 @@ enum CellState: String {
     }
 }
 
-enum Player: String {
-    case X = "X"
-    case O = "O"
-    
-    var description: String {
-        return self.rawValue
-    }
-}
-
-
 extension CellState {
     var isEmpty : Bool {
         if case .EMPTY = self {
             return true
         }
         return false
+    }
+}
+
+enum PlayerMark: String {
+    case X = "X"
+    case O = "O"
+    
+    var description: String {
+        return self.rawValue
     }
 }

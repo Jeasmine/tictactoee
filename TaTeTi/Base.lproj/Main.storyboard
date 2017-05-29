@@ -19,7 +19,7 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -224,6 +224,45 @@
             </objects>
             <point key="canvasLocation" x="1281" y="64"/>
         </scene>
+        <!--Empty Data Set Delegate-->
+        <scene sceneID="8br-Vh-uwc">
+            <objects>
+                <viewController id="YeK-2X-PgR" customClass="HomeViewController" customModule="TaTeTi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WTT-vJ-BGG"/>
+                        <viewControllerLayoutGuide type="bottom" id="RgI-iZ-Tex"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xu2-dv-Xhz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BER-0B-u02">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="YeK-2X-PgR" id="5UU-Pj-gzq"/>
+                                    <outlet property="delegate" destination="YeK-2X-PgR" id="p84-be-cOG"/>
+                                    <outlet property="emptyDataSetDelegate" destination="YeK-2X-PgR" id="yWU-wS-TqE"/>
+                                    <outlet property="emptyDataSetSource" destination="YeK-2X-PgR" id="Lig-fi-xFo"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BER-0B-u02" firstAttribute="top" secondItem="Xu2-dv-Xhz" secondAttribute="top" id="4VM-sR-5uW"/>
+                            <constraint firstAttribute="trailing" secondItem="BER-0B-u02" secondAttribute="trailing" id="4al-Fy-HYx"/>
+                            <constraint firstItem="RgI-iZ-Tex" firstAttribute="top" secondItem="BER-0B-u02" secondAttribute="bottom" id="P9Z-m8-WfI"/>
+                            <constraint firstItem="BER-0B-u02" firstAttribute="leading" secondItem="Xu2-dv-Xhz" secondAttribute="leading" id="ov4-h6-UZS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="BER-0B-u02" id="xqH-ik-orp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bsO-3D-4af" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1275.3623188405797" y="735.32608695652175"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Rah-Na-DWB">
             <objects>
@@ -240,7 +279,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zF6-tk-ww6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="464" y="64"/>
+            <point key="canvasLocation" x="258" y="64"/>
         </scene>
     </scenes>
 </document>

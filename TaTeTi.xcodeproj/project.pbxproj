@@ -7,23 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26CEADAD3EFE5F28836B8CE2 /* Pods_TaTeTi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19DD6DE3307125B121007FF /* Pods_TaTeTi.framework */; };
 		800240E81ED30DC200B2106A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800240E71ED30DC200B2106A /* AppDelegate.swift */; };
 		800240EA1ED30DC200B2106A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800240E91ED30DC200B2106A /* ViewController.swift */; };
 		800240ED1ED30DC200B2106A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 800240EB1ED30DC200B2106A /* Main.storyboard */; };
-		800240EF1ED30DC200B2106A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 800240EE1ED30DC200B2106A /* Assets.xcassets */; };
 		800240F21ED30DC200B2106A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 800240F01ED30DC200B2106A /* LaunchScreen.storyboard */; };
+		80BFC8461EDC485C00EE4532 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BFC8451EDC485C00EE4532 /* HomeViewController.swift */; };
+		80BFC8481EDC49E300EE4532 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80BFC8471EDC49E300EE4532 /* Assets.xcassets */; };
 		80CDD29F1EDB6BC000612639 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CDD29E1EDB6BC000612639 /* Enums.swift */; };
+		80CDD2A31EDB828400612639 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 80CDD2A11EDB828400612639 /* Model.xcdatamodeld */; };
+		80CDD2B11EDB9E8D00612639 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CDD2B01EDB9E8D00612639 /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5439CC434BA28985433477FA /* Pods-TaTeTi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaTeTi.release.xcconfig"; path = "Pods/Target Support Files/Pods-TaTeTi/Pods-TaTeTi.release.xcconfig"; sourceTree = "<group>"; };
+		66136D10440371C1F7C9DAFC /* Pods-TaTeTi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaTeTi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TaTeTi/Pods-TaTeTi.debug.xcconfig"; sourceTree = "<group>"; };
 		800240E41ED30DC200B2106A /* TaTeTi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaTeTi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		800240E71ED30DC200B2106A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		800240E91ED30DC200B2106A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		800240EC1ED30DC200B2106A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		800240EE1ED30DC200B2106A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		800240F11ED30DC200B2106A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		800240F31ED30DC200B2106A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80BFC8451EDC485C00EE4532 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		80BFC8471EDC49E300EE4532 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80CDD29E1EDB6BC000612639 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		80CDD2A21EDB828400612639 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		80CDD2B01EDB9E8D00612639 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		A19DD6DE3307125B121007FF /* Pods_TaTeTi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaTeTi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26CEADAD3EFE5F28836B8CE2 /* Pods_TaTeTi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +53,8 @@
 			children = (
 				800240E61ED30DC200B2106A /* TaTeTi */,
 				800240E51ED30DC200B2106A /* Products */,
+				8ECBA1466CBE7F97FEC31631 /* Pods */,
+				B3BB7A88F9B6A913975B15CF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,10 +69,14 @@
 		800240E61ED30DC200B2106A /* TaTeTi */ = {
 			isa = PBXGroup;
 			children = (
+				80BFC8471EDC49E300EE4532 /* Assets.xcassets */,
+				80CDD2B21EDB9EC200612639 /* Entities */,
 				80CDD29D1EDB6B9600612639 /* Utils */,
 				80CDD2A01EDB6C0000612639 /* Commons */,
 				800240E91ED30DC200B2106A /* ViewController.swift */,
 				800240EB1ED30DC200B2106A /* Main.storyboard */,
+				80CDD2A11EDB828400612639 /* Model.xcdatamodeld */,
+				80BFC8451EDC485C00EE4532 /* HomeViewController.swift */,
 			);
 			path = TaTeTi;
 			sourceTree = "<group>";
@@ -76,11 +93,35 @@
 			isa = PBXGroup;
 			children = (
 				800240E71ED30DC200B2106A /* AppDelegate.swift */,
-				800240EE1ED30DC200B2106A /* Assets.xcassets */,
 				800240F01ED30DC200B2106A /* LaunchScreen.storyboard */,
 				800240F31ED30DC200B2106A /* Info.plist */,
 			);
 			name = Commons;
+			sourceTree = "<group>";
+		};
+		80CDD2B21EDB9EC200612639 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				80CDD2B01EDB9E8D00612639 /* Player.swift */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		8ECBA1466CBE7F97FEC31631 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				66136D10440371C1F7C9DAFC /* Pods-TaTeTi.debug.xcconfig */,
+				5439CC434BA28985433477FA /* Pods-TaTeTi.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B3BB7A88F9B6A913975B15CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A19DD6DE3307125B121007FF /* Pods_TaTeTi.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,9 +131,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 800240F61ED30DC200B2106A /* Build configuration list for PBXNativeTarget "TaTeTi" */;
 			buildPhases = (
+				EF4C5620310AF4D27017064D /* [CP] Check Pods Manifest.lock */,
 				800240E01ED30DC200B2106A /* Sources */,
 				800240E11ED30DC200B2106A /* Frameworks */,
 				800240E21ED30DC200B2106A /* Resources */,
+				8EF685C5C5F7D28E897C5E8B /* [CP] Embed Pods Frameworks */,
+				E9693687C2119E7E8E9FD937 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -144,12 +188,60 @@
 			buildActionMask = 2147483647;
 			files = (
 				800240F21ED30DC200B2106A /* LaunchScreen.storyboard in Resources */,
-				800240EF1ED30DC200B2106A /* Assets.xcassets in Resources */,
+				80BFC8481EDC49E300EE4532 /* Assets.xcassets in Resources */,
 				800240ED1ED30DC200B2106A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8EF685C5C5F7D28E897C5E8B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TaTeTi/Pods-TaTeTi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9693687C2119E7E8E9FD937 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TaTeTi/Pods-TaTeTi-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF4C5620310AF4D27017064D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		800240E01ED30DC200B2106A /* Sources */ = {
@@ -159,6 +251,9 @@
 				800240EA1ED30DC200B2106A /* ViewController.swift in Sources */,
 				80CDD29F1EDB6BC000612639 /* Enums.swift in Sources */,
 				800240E81ED30DC200B2106A /* AppDelegate.swift in Sources */,
+				80CDD2B11EDB9E8D00612639 /* Player.swift in Sources */,
+				80CDD2A31EDB828400612639 /* Model.xcdatamodeld in Sources */,
+				80BFC8461EDC485C00EE4532 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +374,7 @@
 		};
 		800240F71ED30DC200B2106A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66136D10440371C1F7C9DAFC /* Pods-TaTeTi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZYXCB6QKKT;
@@ -292,6 +388,7 @@
 		};
 		800240F81ED30DC200B2106A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5439CC434BA28985433477FA /* Pods-TaTeTi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZYXCB6QKKT;
@@ -325,6 +422,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		80CDD2A11EDB828400612639 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				80CDD2A21EDB828400612639 /* Model.xcdatamodel */,
+			);
+			currentVersion = 80CDD2A21EDB828400612639 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 800240DC1ED30DC200B2106A /* Project object */;
 }

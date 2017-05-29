@@ -1,4 +1,5 @@
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
     
@@ -16,14 +17,40 @@ class ViewController: UIViewController {
     let columns = 3
     
     var boardGame = Array(repeating: Array(repeating: CellState.EMPTY, count: 3), count: 3)
-    var currentPlayer : Player = Player.X
+    var currentPlayer : PlayerMark = PlayerMark.X
     
     override func viewDidLoad() {
-        super.viewDidLoad()    }
+        super.viewDidLoad()
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+//        let newUser = NSEntityDescription.insertNewObject(forEntityName: "Player", into: context) as! Player
+//        newUser.firstName = "Vicenzo"
+//        newUser.lastName = "Corleone"
+//        
+//        do {
+//            try context.save()
+//        } catch {
+//        }
+        
+        
+        
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Player")
+        request.returnsObjectsAsFaults = false
+        
+        do {
+            let result = try context.fetch(request)
+            if result.count > 0 {
+                print(result)
+            }
+        } catch {
+        
+        }
+        
+    }
     
     @IBAction func buttonClick(_ sender: UIButton) {
         var button : UIButton
-        let cellState = currentPlayer == Player.X ? CellState.CROSS : CellState.ZERO
+        let cellState = currentPlayer == PlayerMark.X ? CellState.CROSS : CellState.ZERO
         var currentRow = 0
         var currentColumn = 0
         
@@ -96,7 +123,7 @@ class ViewController: UIViewController {
 extension ViewController {
     
     func swapPlayer() {
-        currentPlayer = currentPlayer == Player.X ? Player.O : Player.X
+        currentPlayer = currentPlayer == PlayerMark.X ? PlayerMark.O : PlayerMark.X
     }
     
     func hasWon(theSeed: CellState, currentRow: Int, currentCol: Int) -> Bool{
@@ -117,16 +144,10 @@ extension ViewController {
     }
     
     func isDraw() -> Bool {
-        var result = true
-        for rIndex in 0..<rows {
-            for cIndex in 0..<columns {
-                let cell = boardGame[rIndex][cIndex] as CellState
-                if(cell.isEmpty) {
-                    result = false
-                    break
-                }
-            }
-        }
-        return result
+        return boardGame.filter { (boardArray:[CellState]) -> Bool in
+            return boardArray.filter({ (cellState: CellState) -> Bool in
+                return cellState.isEmpty
+            }).count > 0
+        }.isEmpty
     }
 }
