@@ -58,59 +58,51 @@ class ViewController: UIViewController {
         case 1:
             currentRow = 0
             currentColumn = 0
-            boardGame[0][0] = cellState
             button = aButton
             break
         case 2:
             currentRow = 0
             currentColumn = 1
-            boardGame[0][1] = cellState
             button = bButton
             break
         case 3:
             currentRow = 0
             currentColumn = 2
-            boardGame[0][2] = cellState
             button = cButton
             break
         case 4:
             currentRow = 1
             currentColumn = 0
-            boardGame[1][0] = cellState
             button = dButton
             break
         case 5:
             currentRow = 1
             currentColumn = 1
-            boardGame[1][1] = cellState
             button = eButton
             break
         case 6:
             currentRow = 1
             currentColumn = 2
-            boardGame[1][2] = cellState
             button = fButton
             break
         case 7:
             currentRow = 2
             currentColumn = 0
-            boardGame[2][0] = cellState
             button = gButton
             break
         case 8:
             currentRow = 2
             currentColumn = 1
-            boardGame[2][1] = cellState
             button = hButton
             break
         default:
             currentRow = 2
             currentColumn = 2
-            boardGame[2][2] = cellState
             button = iButton
             break
         }
         
+        boardGame[currentRow][currentColumn] = cellState
         button.setTitle(currentPlayer.description, for: .normal)
         button.isUserInteractionEnabled = false
         print("Has won: \(hasWon(theSeed: cellState, currentRow: currentRow, currentCol: currentColumn)) player: \(currentPlayer.description)")
