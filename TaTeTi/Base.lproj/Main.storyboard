@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PYl-6A-gIu">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                                <rect key="frame" x="0.0" y="129" width="414" height="414"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rZe-oR-lOx">
                                         <rect key="frame" x="267" y="20" width="1" height="374"/>
@@ -198,11 +198,11 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="PYl-6A-gIu" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="width" id="CnW-X7-Xvk"/>
+                            <constraint firstItem="PYl-6A-gIu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Lgk-R5-wB1"/>
                             <constraint firstAttribute="trailing" secondItem="PYl-6A-gIu" secondAttribute="trailing" id="Mcd-QH-dIF"/>
-                            <constraint firstItem="PYl-6A-gIu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="WMn-dS-t4o"/>
                             <constraint firstItem="PYl-6A-gIu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="m0C-wb-hAc"/>
                         </constraints>
                     </view>
@@ -347,7 +347,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="93I-MR-PdP" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="bxw-ah-iZ7">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bxw-ah-iZ7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
