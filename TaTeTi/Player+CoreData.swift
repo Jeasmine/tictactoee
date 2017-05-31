@@ -6,4 +6,5 @@ extension Player {
     @NSManaged var lastName: String?
     @NSManaged var email: String?
     @NSManaged var age: String?
+    @NSManaged var ranking: Int16
 }

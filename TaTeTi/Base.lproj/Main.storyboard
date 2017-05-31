@@ -14,7 +14,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TaTeTi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MuTicTacToe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -315,7 +315,7 @@
         <!--Empty Data Set Delegate-->
         <scene sceneID="8br-Vh-uwc">
             <objects>
-                <viewController id="YeK-2X-PgR" customClass="HomeViewController" customModule="TaTeTi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="YeK-2X-PgR" customClass="HomeViewController" customModule="MuTicTacToe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WTT-vJ-BGG"/>
                         <viewControllerLayoutGuide type="bottom" id="RgI-iZ-Tex"/>

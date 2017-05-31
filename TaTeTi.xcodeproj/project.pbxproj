@@ -20,12 +20,14 @@
 		80CEEC071EDE2EA700E03723 /* PlayerLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CEEC061EDE2EA700E03723 /* PlayerLocalDataManager.swift */; };
 		80CEEC0B1EDE40B500E03723 /* CoreDataPersistent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CEEC0A1EDE40B500E03723 /* CoreDataPersistent.swift */; };
 		80CEEC0E1EDE44A900E03723 /* Player+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CEEC0D1EDE44A900E03723 /* Player+CoreData.swift */; };
+		80CEEC101EDE612C00E03723 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CEEC0F1EDE612C00E03723 /* Game.swift */; };
+		80CEEC121EDE617900E03723 /* Game+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CEEC111EDE617900E03723 /* Game+CoreData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5439CC434BA28985433477FA /* Pods-TaTeTi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaTeTi.release.xcconfig"; path = "Pods/Target Support Files/Pods-TaTeTi/Pods-TaTeTi.release.xcconfig"; sourceTree = "<group>"; };
 		66136D10440371C1F7C9DAFC /* Pods-TaTeTi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaTeTi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TaTeTi/Pods-TaTeTi.debug.xcconfig"; sourceTree = "<group>"; };
-		800240E41ED30DC200B2106A /* TaTeTi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaTeTi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		800240E41ED30DC200B2106A /* MuTicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuTicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		800240E71ED30DC200B2106A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		800240E91ED30DC200B2106A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		800240EC1ED30DC200B2106A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -39,6 +41,8 @@
 		80CEEC061EDE2EA700E03723 /* PlayerLocalDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerLocalDataManager.swift; sourceTree = "<group>"; };
 		80CEEC0A1EDE40B500E03723 /* CoreDataPersistent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataPersistent.swift; sourceTree = "<group>"; };
 		80CEEC0D1EDE44A900E03723 /* Player+CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Player+CoreData.swift"; sourceTree = "<group>"; };
+		80CEEC0F1EDE612C00E03723 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		80CEEC111EDE617900E03723 /* Game+CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Game+CoreData.swift"; sourceTree = "<group>"; };
 		A19DD6DE3307125B121007FF /* Pods_TaTeTi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaTeTi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -67,7 +71,7 @@
 		800240E51ED30DC200B2106A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				800240E41ED30DC200B2106A /* TaTeTi.app */,
+				800240E41ED30DC200B2106A /* MuTicTacToe.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,6 +114,8 @@
 			children = (
 				80CDD2B01EDB9E8D00612639 /* Player.swift */,
 				80CEEC0D1EDE44A900E03723 /* Player+CoreData.swift */,
+				80CEEC0F1EDE612C00E03723 /* Game.swift */,
+				80CEEC111EDE617900E03723 /* Game+CoreData.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -144,9 +150,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		800240E31ED30DC200B2106A /* TaTeTi */ = {
+		800240E31ED30DC200B2106A /* MuTicTacToe */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 800240F61ED30DC200B2106A /* Build configuration list for PBXNativeTarget "TaTeTi" */;
+			buildConfigurationList = 800240F61ED30DC200B2106A /* Build configuration list for PBXNativeTarget "MuTicTacToe" */;
 			buildPhases = (
 				EF4C5620310AF4D27017064D /* [CP] Check Pods Manifest.lock */,
 				800240E01ED30DC200B2106A /* Sources */,
@@ -159,9 +165,9 @@
 			);
 			dependencies = (
 			);
-			name = TaTeTi;
+			name = MuTicTacToe;
 			productName = TaTeTi;
-			productReference = 800240E41ED30DC200B2106A /* TaTeTi.app */;
+			productReference = 800240E41ED30DC200B2106A /* MuTicTacToe.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -194,7 +200,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				800240E31ED30DC200B2106A /* TaTeTi */,
+				800240E31ED30DC200B2106A /* MuTicTacToe */,
 			);
 		};
 /* End PBXProject section */
@@ -266,9 +272,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				800240EA1ED30DC200B2106A /* ViewController.swift in Sources */,
+				80CEEC101EDE612C00E03723 /* Game.swift in Sources */,
 				80CDD29F1EDB6BC000612639 /* Enums.swift in Sources */,
 				800240E81ED30DC200B2106A /* AppDelegate.swift in Sources */,
 				80CDD2B11EDB9E8D00612639 /* Player.swift in Sources */,
+				80CEEC121EDE617900E03723 /* Game+CoreData.swift in Sources */,
 				80CDD2A31EDB828400612639 /* Model.xcdatamodeld in Sources */,
 				80CEEC0B1EDE40B500E03723 /* CoreDataPersistent.swift in Sources */,
 				80BFC8461EDC485C00EE4532 /* HomeViewController.swift in Sources */,
@@ -432,7 +440,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		800240F61ED30DC200B2106A /* Build configuration list for PBXNativeTarget "TaTeTi" */ = {
+		800240F61ED30DC200B2106A /* Build configuration list for PBXNativeTarget "MuTicTacToe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				800240F71ED30DC200B2106A /* Debug */,

@@ -1,3 +1,17 @@
+class EnumFactory {
+    
+    static func getGameState(stateInt: Int16) -> GameState {
+        switch stateInt {
+        case 1:
+            return GameState.CROSS_WON
+        case 2:
+            return GameState.ZERO_WON
+        default:
+            return GameState.DRAW
+        }
+    }
+}
+
 enum GameState: String {
     case PLAYING = "Playing"
     case DRAW = "Its a draw!"
@@ -6,6 +20,17 @@ enum GameState: String {
     
     var description: String {
         return self.rawValue
+    }
+    
+    var result: Int16 {
+        switch self {
+        case .CROSS_WON:
+            return 1
+        case .ZERO_WON:
+            return 2
+        default:
+            return 0
+        }
     }
 }
 

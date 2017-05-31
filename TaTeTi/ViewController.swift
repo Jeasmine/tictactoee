@@ -106,8 +106,10 @@ extension ViewController {
     func initPlayers() {
         if (playerOne == nil || playerTwo == nil) {
             do {
-                try playerOne = dataManager.player(firstName: "Mother of cows", lastName: "")
-                try playerTwo = dataManager.player(firstName: "Junior cow", lastName: "")
+                try playerOne = dataManager.createPlayer(firstName: "Mother of cows", lastName: "")
+                try playerTwo = dataManager.createPlayer(firstName: "Junior cow", lastName: "")
+                print(playerOne!)
+                print(playerTwo!)
             } catch {
                 SwiftMessages.show {
                     let view = MessageView.viewFromNib(layout: .CardView)
@@ -134,8 +136,15 @@ extension ViewController {
     
     func endGameLogic() {
         showGameEndedMessage()
-        if (!arePlayerDefault) {
-            //save game on DB
+        if (arePlayerDefault) {
+            do {
+                let game = try dataManager.createGame(playerX: playerOne!, playerO: playerTwo!, gameState: currentGameState)
+                print(game)
+                let players = try dataManager.retrieveRankingPlayerList()
+                print (players)
+            } catch {
+                print("Could not save game")
+            }
         }
     }
     
