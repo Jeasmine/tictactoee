@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		26CEADAD3EFE5F28836B8CE2 /* Pods_TaTeTi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19DD6DE3307125B121007FF /* Pods_TaTeTi.framework */; };
+		800052061EDF5EB700B800F0 /* PlayerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800052051EDF5EB700B800F0 /* PlayerViewCell.swift */; };
 		800240E81ED30DC200B2106A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800240E71ED30DC200B2106A /* AppDelegate.swift */; };
 		800240EA1ED30DC200B2106A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800240E91ED30DC200B2106A /* ViewController.swift */; };
 		800240ED1ED30DC200B2106A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 800240EB1ED30DC200B2106A /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		5439CC434BA28985433477FA /* Pods-TaTeTi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaTeTi.release.xcconfig"; path = "Pods/Target Support Files/Pods-TaTeTi/Pods-TaTeTi.release.xcconfig"; sourceTree = "<group>"; };
 		66136D10440371C1F7C9DAFC /* Pods-TaTeTi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaTeTi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TaTeTi/Pods-TaTeTi.debug.xcconfig"; sourceTree = "<group>"; };
+		800052051EDF5EB700B800F0 /* PlayerViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewCell.swift; sourceTree = "<group>"; };
 		800240E41ED30DC200B2106A /* MuTicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuTicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		800240E71ED30DC200B2106A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		800240E91ED30DC200B2106A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		800052071EDF5EC400B800F0 /* Players View */ = {
+			isa = PBXGroup;
+			children = (
+				80AD072C1EDF32060013CCAD /* PlayersViewController.swift */,
+				800052051EDF5EB700B800F0 /* PlayerViewCell.swift */,
+			);
+			name = "Players View";
+			sourceTree = "<group>";
+		};
+		800052081EDF5ECF00B800F0 /* New Player View */ = {
+			isa = PBXGroup;
+			children = (
+				80AD072A1EDF317B0013CCAD /* NewPlayerViewController.swift */,
+			);
+			name = "New Player View";
+			sourceTree = "<group>";
+		};
+		800052091EDF5ED900B800F0 /* Home View */ = {
+			isa = PBXGroup;
+			children = (
+				80AD07281EDF31200013CCAD /* HomeViewController.swift */,
+			);
+			name = "Home View";
+			sourceTree = "<group>";
+		};
+		8000520A1EDF5EDE00B800F0 /* Ranking */ = {
+			isa = PBXGroup;
+			children = (
+				80BFC8451EDC485C00EE4532 /* RankingViewController.swift */,
+			);
+			name = Ranking;
+			sourceTree = "<group>";
+		};
+		8000520B1EDF5EE700B800F0 /* Game View */ = {
+			isa = PBXGroup;
+			children = (
+				800240E91ED30DC200B2106A /* ViewController.swift */,
+			);
+			name = "Game View";
+			sourceTree = "<group>";
+		};
 		800240DB1ED30DC200B2106A = {
 			isa = PBXGroup;
 			children = (
@@ -91,12 +134,11 @@
 				80CDD2B21EDB9EC200612639 /* Models */,
 				80CDD29D1EDB6B9600612639 /* Utils */,
 				80CDD2A01EDB6C0000612639 /* Commons */,
-				800240E91ED30DC200B2106A /* ViewController.swift */,
-				800240EB1ED30DC200B2106A /* Main.storyboard */,
-				80BFC8451EDC485C00EE4532 /* RankingViewController.swift */,
-				80AD07281EDF31200013CCAD /* HomeViewController.swift */,
-				80AD072A1EDF317B0013CCAD /* NewPlayerViewController.swift */,
-				80AD072C1EDF32060013CCAD /* PlayersViewController.swift */,
+				800052091EDF5ED900B800F0 /* Home View */,
+				8000520B1EDF5EE700B800F0 /* Game View */,
+				8000520A1EDF5EDE00B800F0 /* Ranking */,
+				800052081EDF5ECF00B800F0 /* New Player View */,
+				800052071EDF5EC400B800F0 /* Players View */,
 			);
 			path = TaTeTi;
 			sourceTree = "<group>";
@@ -113,9 +155,10 @@
 		80CDD2A01EDB6C0000612639 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
-				80BFC8471EDC49E300EE4532 /* Assets.xcassets */,
 				800240E71ED30DC200B2106A /* AppDelegate.swift */,
+				800240EB1ED30DC200B2106A /* Main.storyboard */,
 				800240F01ED30DC200B2106A /* LaunchScreen.storyboard */,
+				80BFC8471EDC49E300EE4532 /* Assets.xcassets */,
 				800240F31ED30DC200B2106A /* Info.plist */,
 			);
 			name = Commons;
@@ -290,6 +333,7 @@
 				80AD072B1EDF317B0013CCAD /* NewPlayerViewController.swift in Sources */,
 				800240E81ED30DC200B2106A /* AppDelegate.swift in Sources */,
 				80CDD2B11EDB9E8D00612639 /* Player.swift in Sources */,
+				800052061EDF5EB700B800F0 /* PlayerViewCell.swift in Sources */,
 				80CEEC121EDE617900E03723 /* Game+CoreData.swift in Sources */,
 				80AD072D1EDF32060013CCAD /* PlayersViewController.swift in Sources */,
 				80CDD2A31EDB828400612639 /* Model.xcdatamodeld in Sources */,

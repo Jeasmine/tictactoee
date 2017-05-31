@@ -397,7 +397,7 @@
             </objects>
             <point key="canvasLocation" x="430" y="64"/>
         </scene>
-        <!--Players View Controller-->
+        <!--Empty Data Set Delegate-->
         <scene sceneID="YHj-K9-GNd">
             <objects>
                 <tableViewController id="8DE-Dm-0JU" customClass="PlayersViewController" customModule="MuTicTacToe" customModuleProvider="target" sceneMemberID="viewController">
@@ -406,21 +406,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="gmn-hV-abz">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="PlayerViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="player_cell" rowHeight="60" id="gmn-hV-abz" customClass="PlayerViewCell" customModule="MuTicTacToe" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gmn-hV-abz" id="BbO-Cr-PXm">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gmn-hV-abz" id="BbO-Cr-PXm" customClass="PlayerViewCell" customModule="MuTicTacToe" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="59.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Sq-ou-mgr">
+                                            <rect key="frame" x="20" y="17.666666666666664" width="374" height="23.999999999999993"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <color key="textColor" red="1" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="6Sq-ou-mgr" firstAttribute="centerY" secondItem="BbO-Cr-PXm" secondAttribute="centerY" id="H23-yw-Iv5"/>
+                                        <constraint firstAttribute="trailing" secondItem="6Sq-ou-mgr" secondAttribute="trailing" constant="20" symbolic="YES" id="gpY-vw-eVD"/>
+                                        <constraint firstItem="6Sq-ou-mgr" firstAttribute="leading" secondItem="BbO-Cr-PXm" secondAttribute="leading" constant="20" symbolic="YES" id="huT-Zk-mNV"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="playerName" destination="6Sq-ou-mgr" id="l2r-Mt-Bhf"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="8DE-Dm-0JU" id="jQE-17-vIp"/>
                             <outlet property="delegate" destination="8DE-Dm-0JU" id="pem-6m-CZ7"/>
+                            <outlet property="emptyDataSetDelegate" destination="8DE-Dm-0JU" id="R9S-WA-SYw"/>
+                            <outlet property="emptyDataSetSource" destination="8DE-Dm-0JU" id="9NW-rv-YJ7"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="A0B-Zh-qjj">
+                    <navigationItem key="navigationItem" title="🐮 Players  🐮" id="A0B-Zh-qjj">
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="OYI-IL-NNv">
                                 <connections>
@@ -437,7 +455,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PGC-hD-3Vi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="429" y="780"/>
+            <point key="canvasLocation" x="428.98550724637687" y="779.34782608695662"/>
         </scene>
         <!--Empty Data Set Delegate-->
         <scene sceneID="8br-Vh-uwc">
@@ -499,6 +517,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="eYS-fd-Gnc"/>
+        <segue reference="bWs-5m-8vl"/>
     </inferredMetricsTieBreakers>
 </document>

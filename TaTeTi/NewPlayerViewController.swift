@@ -20,8 +20,7 @@ class NewPlayerViewController: UIViewController {
             age = Int(ageString)!
         }
         do {
-            let player = try dataManager.createPlayer(firstName: firstName, lastName: lastNameField.text, email: emailField.text, age: Int16(age))
-            print(player)
+            try dataManager.createPlayer(firstName: firstName, lastName: lastNameField.text, email: emailField.text, age: Int16(age))
             self.navigationController?.popViewController(animated: true)
         } catch {
             MessageBuilder.showErrorMessage(titleMessage: "Error", bodyMessage: "Could not create player")
