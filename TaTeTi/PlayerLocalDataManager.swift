@@ -59,13 +59,15 @@ class PlayerLocalDataManager {
         throw PersistenceError.couldNotCreateObject
     }
     
-    func createPlayer(firstName: String, lastName: String) throws -> Player {
+    func createPlayer(firstName: String, lastName: String?, email: String?, age: Int16) throws -> Player {
         guard let context = CoreDataPersistent.managedObjectContext else {
             throw PersistenceError.managedObjectContextNotFound
         }
         if let newPlayer = NSEntityDescription.insertNewObject(forEntityName: "Player", into: context) as? Player {
             newPlayer.firstName = firstName
             newPlayer.lastName = lastName
+            newPlayer.email = email
+            newPlayer.age = age
             try context.save()
             return newPlayer
         }
@@ -73,30 +75,28 @@ class PlayerLocalDataManager {
     }
     
     func retrievePlayerList() throws -> [Player] {
-        guard let context = CoreDataPersistent.managedObjectContext else {
-            throw PersistenceError.managedObjectContextNotFound
-        }
-        
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Player")
-        request.returnsObjectsAsFaults = false
+        let playerFetch = try makePlayerContextFetch()
         let caseInsensitiveSelector = #selector(NSString.caseInsensitiveCompare(_:))
         let sortDescriptorFirstName = NSSortDescriptor(key: "firstName", ascending: true, selector: caseInsensitiveSelector)
         let sortDescriptorLastName = NSSortDescriptor(key: "lastName", ascending: true, selector: caseInsensitiveSelector)
-        request.sortDescriptors = [sortDescriptorFirstName, sortDescriptorLastName]
+        playerFetch.request.sortDescriptors = [sortDescriptorFirstName, sortDescriptorLastName]
         
-        return try context.fetch(request) as! [Player]
+        return try playerFetch.context.fetch(playerFetch.request) as! [Player]
     }
     
     func retrieveRankingPlayerList() throws -> [Player] {
+        let playerFetch = try makePlayerContextFetch()
+        playerFetch.request.sortDescriptors = [NSSortDescriptor(key: "ranking", ascending: false)]
+        
+        return try playerFetch.context.fetch(playerFetch.request) as! [Player]
+    }
+    
+    private func makePlayerContextFetch() throws -> (context: NSManagedObjectContext, request: NSFetchRequest<NSFetchRequestResult>) {
         guard let context = CoreDataPersistent.managedObjectContext else {
             throw PersistenceError.managedObjectContextNotFound
         }
-        
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Player")
         request.returnsObjectsAsFaults = false
-        let sortDescriptor = NSSortDescriptor(key: "ranking", ascending: false)
-        request.sortDescriptors = [sortDescriptor]
-        
-        return try context.fetch(request) as! [Player]
+        return (context, request)
     }
 }

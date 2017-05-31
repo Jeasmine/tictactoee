@@ -12,7 +12,11 @@
 		800240EA1ED30DC200B2106A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800240E91ED30DC200B2106A /* ViewController.swift */; };
 		800240ED1ED30DC200B2106A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 800240EB1ED30DC200B2106A /* Main.storyboard */; };
 		800240F21ED30DC200B2106A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 800240F01ED30DC200B2106A /* LaunchScreen.storyboard */; };
-		80BFC8461EDC485C00EE4532 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BFC8451EDC485C00EE4532 /* HomeViewController.swift */; };
+		80AD07271EDF069E0013CCAD /* MessageBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AD07261EDF069E0013CCAD /* MessageBuilder.swift */; };
+		80AD07291EDF31200013CCAD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AD07281EDF31200013CCAD /* HomeViewController.swift */; };
+		80AD072B1EDF317B0013CCAD /* NewPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AD072A1EDF317B0013CCAD /* NewPlayerViewController.swift */; };
+		80AD072D1EDF32060013CCAD /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AD072C1EDF32060013CCAD /* PlayersViewController.swift */; };
+		80BFC8461EDC485C00EE4532 /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BFC8451EDC485C00EE4532 /* RankingViewController.swift */; };
 		80BFC8481EDC49E300EE4532 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80BFC8471EDC49E300EE4532 /* Assets.xcassets */; };
 		80CDD29F1EDB6BC000612639 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CDD29E1EDB6BC000612639 /* Enums.swift */; };
 		80CDD2A31EDB828400612639 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 80CDD2A11EDB828400612639 /* Model.xcdatamodeld */; };
@@ -33,7 +37,11 @@
 		800240EC1ED30DC200B2106A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		800240F11ED30DC200B2106A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		800240F31ED30DC200B2106A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		80BFC8451EDC485C00EE4532 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		80AD07261EDF069E0013CCAD /* MessageBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageBuilder.swift; sourceTree = "<group>"; };
+		80AD07281EDF31200013CCAD /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		80AD072A1EDF317B0013CCAD /* NewPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPlayerViewController.swift; sourceTree = "<group>"; };
+		80AD072C1EDF32060013CCAD /* PlayersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
+		80BFC8451EDC485C00EE4532 /* RankingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
 		80BFC8471EDC49E300EE4532 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80CDD29E1EDB6BC000612639 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		80CDD2A21EDB828400612639 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -85,7 +93,10 @@
 				80CDD2A01EDB6C0000612639 /* Commons */,
 				800240E91ED30DC200B2106A /* ViewController.swift */,
 				800240EB1ED30DC200B2106A /* Main.storyboard */,
-				80BFC8451EDC485C00EE4532 /* HomeViewController.swift */,
+				80BFC8451EDC485C00EE4532 /* RankingViewController.swift */,
+				80AD07281EDF31200013CCAD /* HomeViewController.swift */,
+				80AD072A1EDF317B0013CCAD /* NewPlayerViewController.swift */,
+				80AD072C1EDF32060013CCAD /* PlayersViewController.swift */,
 			);
 			path = TaTeTi;
 			sourceTree = "<group>";
@@ -94,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				80CDD29E1EDB6BC000612639 /* Enums.swift */,
+				80AD07261EDF069E0013CCAD /* MessageBuilder.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -274,13 +286,17 @@
 				800240EA1ED30DC200B2106A /* ViewController.swift in Sources */,
 				80CEEC101EDE612C00E03723 /* Game.swift in Sources */,
 				80CDD29F1EDB6BC000612639 /* Enums.swift in Sources */,
+				80AD07271EDF069E0013CCAD /* MessageBuilder.swift in Sources */,
+				80AD072B1EDF317B0013CCAD /* NewPlayerViewController.swift in Sources */,
 				800240E81ED30DC200B2106A /* AppDelegate.swift in Sources */,
 				80CDD2B11EDB9E8D00612639 /* Player.swift in Sources */,
 				80CEEC121EDE617900E03723 /* Game+CoreData.swift in Sources */,
+				80AD072D1EDF32060013CCAD /* PlayersViewController.swift in Sources */,
 				80CDD2A31EDB828400612639 /* Model.xcdatamodeld in Sources */,
 				80CEEC0B1EDE40B500E03723 /* CoreDataPersistent.swift in Sources */,
-				80BFC8461EDC485C00EE4532 /* HomeViewController.swift in Sources */,
+				80BFC8461EDC485C00EE4532 /* RankingViewController.swift in Sources */,
 				80CEEC071EDE2EA700E03723 /* PlayerLocalDataManager.swift in Sources */,
+				80AD07291EDF31200013CCAD /* HomeViewController.swift in Sources */,
 				80CEEC0E1EDE44A900E03723 /* Player+CoreData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

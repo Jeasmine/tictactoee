@@ -106,18 +106,12 @@ extension ViewController {
     func initPlayers() {
         if (playerOne == nil || playerTwo == nil) {
             do {
-                try playerOne = dataManager.createPlayer(firstName: "Mother of cows", lastName: "")
-                try playerTwo = dataManager.createPlayer(firstName: "Junior cow", lastName: "")
+                try playerOne = dataManager.player(firstName: "Mother of cows", lastName: "")
+                try playerTwo = dataManager.player(firstName: "Junior cow", lastName: "")
                 print(playerOne!)
                 print(playerTwo!)
             } catch {
-                SwiftMessages.show {
-                    let view = MessageView.viewFromNib(layout: .CardView)
-                    view.configureTheme(.error)
-                    view.configureDropShadow()
-                    view.configureContent(title: "Could not init players", body: self.currentGameState.description, iconText: "☹️")
-                    return view
-                }
+                MessageBuilder.showWarningMessage(titleMessage: "Could not init players", bodyMessage: self.currentGameState.description)
             }
             arePlayerDefault = true
         }
@@ -136,7 +130,7 @@ extension ViewController {
     
     func endGameLogic() {
         showGameEndedMessage()
-        if (arePlayerDefault) {
+        if (!arePlayerDefault) {
             do {
                 let game = try dataManager.createGame(playerX: playerOne!, playerO: playerTwo!, gameState: currentGameState)
                 print(game)
@@ -149,13 +143,7 @@ extension ViewController {
     }
     
     func showGameEndedMessage() {
-        SwiftMessages.show {
-            let view = MessageView.viewFromNib(layout: .CardView)
-            view.configureTheme(.warning)
-            view.configureDropShadow()
-            view.configureContent(title: "Game is over", body: self.currentGameState.description, iconText: "🐮")
-            return view
-        }
+        MessageBuilder.showWarningMessage(titleMessage: "Game is over", bodyMessage: self.currentGameState.description)
         resetButtons()
     }
     
