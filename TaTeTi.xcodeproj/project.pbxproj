@@ -17,6 +17,9 @@
 		80CDD29F1EDB6BC000612639 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CDD29E1EDB6BC000612639 /* Enums.swift */; };
 		80CDD2A31EDB828400612639 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 80CDD2A11EDB828400612639 /* Model.xcdatamodeld */; };
 		80CDD2B11EDB9E8D00612639 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CDD2B01EDB9E8D00612639 /* Player.swift */; };
+		80CEEC071EDE2EA700E03723 /* PlayerLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CEEC061EDE2EA700E03723 /* PlayerLocalDataManager.swift */; };
+		80CEEC0B1EDE40B500E03723 /* CoreDataPersistent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CEEC0A1EDE40B500E03723 /* CoreDataPersistent.swift */; };
+		80CEEC0E1EDE44A900E03723 /* Player+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CEEC0D1EDE44A900E03723 /* Player+CoreData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 		80CDD29E1EDB6BC000612639 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		80CDD2A21EDB828400612639 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		80CDD2B01EDB9E8D00612639 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		80CEEC061EDE2EA700E03723 /* PlayerLocalDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerLocalDataManager.swift; sourceTree = "<group>"; };
+		80CEEC0A1EDE40B500E03723 /* CoreDataPersistent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataPersistent.swift; sourceTree = "<group>"; };
+		80CEEC0D1EDE44A900E03723 /* Player+CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Player+CoreData.swift"; sourceTree = "<group>"; };
 		A19DD6DE3307125B121007FF /* Pods_TaTeTi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaTeTi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -69,13 +75,12 @@
 		800240E61ED30DC200B2106A /* TaTeTi */ = {
 			isa = PBXGroup;
 			children = (
-				80BFC8471EDC49E300EE4532 /* Assets.xcassets */,
-				80CDD2B21EDB9EC200612639 /* Entities */,
+				80CEEC0C1EDE43AA00E03723 /* Data Manager */,
+				80CDD2B21EDB9EC200612639 /* Models */,
 				80CDD29D1EDB6B9600612639 /* Utils */,
 				80CDD2A01EDB6C0000612639 /* Commons */,
 				800240E91ED30DC200B2106A /* ViewController.swift */,
 				800240EB1ED30DC200B2106A /* Main.storyboard */,
-				80CDD2A11EDB828400612639 /* Model.xcdatamodeld */,
 				80BFC8451EDC485C00EE4532 /* HomeViewController.swift */,
 			);
 			path = TaTeTi;
@@ -92,6 +97,7 @@
 		80CDD2A01EDB6C0000612639 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				80BFC8471EDC49E300EE4532 /* Assets.xcassets */,
 				800240E71ED30DC200B2106A /* AppDelegate.swift */,
 				800240F01ED30DC200B2106A /* LaunchScreen.storyboard */,
 				800240F31ED30DC200B2106A /* Info.plist */,
@@ -99,12 +105,23 @@
 			name = Commons;
 			sourceTree = "<group>";
 		};
-		80CDD2B21EDB9EC200612639 /* Entities */ = {
+		80CDD2B21EDB9EC200612639 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				80CDD2B01EDB9E8D00612639 /* Player.swift */,
+				80CEEC0D1EDE44A900E03723 /* Player+CoreData.swift */,
 			);
-			name = Entities;
+			name = Models;
+			sourceTree = "<group>";
+		};
+		80CEEC0C1EDE43AA00E03723 /* Data Manager */ = {
+			isa = PBXGroup;
+			children = (
+				80CDD2A11EDB828400612639 /* Model.xcdatamodeld */,
+				80CEEC061EDE2EA700E03723 /* PlayerLocalDataManager.swift */,
+				80CEEC0A1EDE40B500E03723 /* CoreDataPersistent.swift */,
+			);
+			name = "Data Manager";
 			sourceTree = "<group>";
 		};
 		8ECBA1466CBE7F97FEC31631 /* Pods */ = {
@@ -253,7 +270,10 @@
 				800240E81ED30DC200B2106A /* AppDelegate.swift in Sources */,
 				80CDD2B11EDB9E8D00612639 /* Player.swift in Sources */,
 				80CDD2A31EDB828400612639 /* Model.xcdatamodeld in Sources */,
+				80CEEC0B1EDE40B500E03723 /* CoreDataPersistent.swift in Sources */,
 				80BFC8461EDC485C00EE4532 /* HomeViewController.swift in Sources */,
+				80CEEC071EDE2EA700E03723 /* PlayerLocalDataManager.swift in Sources */,
+				80CEEC0E1EDE44A900E03723 /* Player+CoreData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

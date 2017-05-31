@@ -1,5 +1,6 @@
 import UIKit
 import CoreData
+import SwiftMessages
 
 class ViewController: UIViewController {
     
@@ -13,46 +14,31 @@ class ViewController: UIViewController {
     @IBOutlet weak var hButton: UIButton!
     @IBOutlet weak var iButton: UIButton!
     
-    let rows = 3
-    let columns = 3
+    @IBOutlet var buttons: [UIButton]!
     
+    /*
+     * Player one is always X
+     */
+    var playerOne: Player?
+    var playerTwo: Player?
+    var arePlayerDefault = false
+    
+    var currentGameState = GameState.PLAYING
+    var currentPlayer = PlayerMark.X
     var boardGame = Array(repeating: Array(repeating: CellState.EMPTY, count: 3), count: 3)
-    var currentPlayer : PlayerMark = PlayerMark.X
+    
+    var dataManager = PlayerLocalDataManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-//        let newUser = NSEntityDescription.insertNewObject(forEntityName: "Player", into: context) as! Player
-//        newUser.firstName = "Vicenzo"
-//        newUser.lastName = "Corleone"
-//        
-//        do {
-//            try context.save()
-//        } catch {
-//        }
-        
-        
-        
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Player")
-        request.returnsObjectsAsFaults = false
-        
-        do {
-            let result = try context.fetch(request)
-            if result.count > 0 {
-                print(result)
-            }
-        } catch {
-        
-        }
-        
+        initPlayers()
     }
     
     @IBAction func buttonClick(_ sender: UIButton) {
-        var button : UIButton
         let cellState = currentPlayer == PlayerMark.X ? CellState.CROSS : CellState.ZERO
-        var currentRow = 0
-        var currentColumn = 0
+        var button: UIButton
+        var currentRow: Int
+        var currentColumn: Int
         
         switch sender.tag {
         case 1:
@@ -105,34 +91,91 @@ class ViewController: UIViewController {
         boardGame[currentRow][currentColumn] = cellState
         button.setTitle(currentPlayer.description, for: .normal)
         button.isUserInteractionEnabled = false
-        print("Has won: \(hasWon(theSeed: cellState, currentRow: currentRow, currentCol: currentColumn)) player: \(currentPlayer.description)")
-        print("Is draw: \(isDraw())")
         
-        swapPlayer()
+        let gameEnded = hasGameEnded(currentCellState: cellState, currentRow: currentRow, currentColumn: currentColumn)
+        if (gameEnded) {
+            endGameLogic()
+        } else {
+            swapPlayer()
+        }
     }
 }
 
 extension ViewController {
     
+    func initPlayers() {
+        if (playerOne == nil || playerTwo == nil) {
+            do {
+                try playerOne = dataManager.player(firstName: "Mother of cows", lastName: "")
+                try playerTwo = dataManager.player(firstName: "Junior cow", lastName: "")
+            } catch {
+                SwiftMessages.show {
+                    let view = MessageView.viewFromNib(layout: .CardView)
+                    view.configureTheme(.error)
+                    view.configureDropShadow()
+                    view.configureContent(title: "Could not init players", body: self.currentGameState.description, iconText: "☹️")
+                    return view
+                }
+            }
+            arePlayerDefault = true
+        }
+    }
+    
+    func resetButtons() {
+        for button in buttons {
+            button.setTitle(" ", for: .normal)
+            button.isUserInteractionEnabled = true
+        }
+    }
+    
     func swapPlayer() {
         currentPlayer = currentPlayer == PlayerMark.X ? PlayerMark.O : PlayerMark.X
     }
     
-    func hasWon(theSeed: CellState, currentRow: Int, currentCol: Int) -> Bool{
-        return boardGame[currentRow][0] == theSeed &&
-            boardGame[currentRow][1] == theSeed &&
-            boardGame[currentRow][2] == theSeed ||
-            boardGame[0][currentCol] == theSeed &&
-            boardGame[1][currentCol] == theSeed &&
-            boardGame[2][currentCol] == theSeed ||
-            currentRow == currentCol &&
-            boardGame[0][0] == theSeed &&
-            boardGame[1][1] == theSeed &&
-            boardGame[2][2] == theSeed ||
-            currentRow + currentCol == 2  &&
-            boardGame[0][2] == theSeed &&
-            boardGame[1][1] == theSeed &&
-            boardGame[2][0] == theSeed
+    func endGameLogic() {
+        showGameEndedMessage()
+        if (!arePlayerDefault) {
+            //save game on DB
+        }
+    }
+    
+    func showGameEndedMessage() {
+        SwiftMessages.show {
+            let view = MessageView.viewFromNib(layout: .CardView)
+            view.configureTheme(.warning)
+            view.configureDropShadow()
+            view.configureContent(title: "Game is over", body: self.currentGameState.description, iconText: "🐮")
+            return view
+        }
+        resetButtons()
+    }
+    
+    func hasGameEnded(currentCellState cellState: CellState, currentRow row: Int, currentColumn column: Int) -> Bool {
+        if (hasWon(cellState, row, column)) {
+            currentGameState = currentPlayer == PlayerMark.X ? GameState.CROSS_WON : GameState.ZERO_WON
+        } else if (isDraw()) {
+            currentGameState = GameState.DRAW
+        } else {
+            return false
+        }
+        return true
+    }
+    
+    func hasWon(_ cellState: CellState, _ row: Int, _ column: Int) -> Bool {
+        return boardGame[row][0] == cellState &&
+            boardGame[row][1] == cellState &&
+            boardGame[row][2] == cellState ||
+            boardGame[0][column] == cellState &&
+            boardGame[1][column] == cellState &&
+            boardGame[2][column] == cellState ||
+            row == column &&
+            boardGame[0][0] == cellState &&
+            boardGame[1][1] == cellState &&
+            boardGame[2][2] == cellState ||
+            row + column == 2  &&
+            boardGame[0][2] == cellState &&
+            boardGame[1][1] == cellState &&
+            boardGame[2][0] == cellState
     }
     
     func isDraw() -> Bool {
@@ -140,6 +183,6 @@ extension ViewController {
             return boardArray.filter({ (cellState: CellState) -> Bool in
                 return cellState.isEmpty
             }).count > 0
-        }.isEmpty
+            }.isEmpty
     }
 }

@@ -1,8 +1,8 @@
 enum GameState: String {
-    case PLAYING = "PLAYING"
-    case DRAW = "DRAW"
-    case CROSS_WON = "CROSS_WON"
-    case ZERO_WON = "ZERO_WON"
+    case PLAYING = "Playing"
+    case DRAW = "Its a draw!"
+    case CROSS_WON = "Cross has won!"
+    case ZERO_WON = "Zero has won!"
     
     var description: String {
         return self.rawValue
