@@ -219,6 +219,15 @@
                         <outlet property="gButton" destination="rvB-hb-j6p" id="MCd-kt-Z35"/>
                         <outlet property="hButton" destination="vPb-co-WTt" id="oUX-ZV-uus"/>
                         <outlet property="iButton" destination="2xk-gc-gBC" id="eH7-oh-7W5"/>
+                        <outletCollection property="buttons" destination="IrX-SY-Dr9" collectionClass="NSMutableArray" id="MQM-Ty-THS"/>
+                        <outletCollection property="buttons" destination="Kc2-Kr-ZQq" collectionClass="NSMutableArray" id="Aeg-qI-hRZ"/>
+                        <outletCollection property="buttons" destination="NDt-Nl-Ont" collectionClass="NSMutableArray" id="nvA-r1-kKM"/>
+                        <outletCollection property="buttons" destination="rvB-hb-j6p" collectionClass="NSMutableArray" id="4lY-GY-aUg"/>
+                        <outletCollection property="buttons" destination="vPb-co-WTt" collectionClass="NSMutableArray" id="k29-NA-vHv"/>
+                        <outletCollection property="buttons" destination="2xk-gc-gBC" collectionClass="NSMutableArray" id="bXt-CR-jiD"/>
+                        <outletCollection property="buttons" destination="Pfw-ho-g5d" collectionClass="NSMutableArray" id="SvD-VB-brM"/>
+                        <outletCollection property="buttons" destination="xJj-pn-eUJ" collectionClass="NSMutableArray" id="hLF-wj-7UH"/>
+                        <outletCollection property="buttons" destination="lIQ-OJ-FKx" collectionClass="NSMutableArray" id="dGt-Gp-xAE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
