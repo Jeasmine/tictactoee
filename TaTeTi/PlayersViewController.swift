@@ -12,6 +12,7 @@ class PlayersViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.allowsMultipleSelection = true
+        self.tableView.tableFooterView = UIView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
