@@ -105,6 +105,8 @@ extension ViewController {
         if (selectedPlayers.count == 2) {
             playerOne = selectedPlayers[0]
             playerTwo = selectedPlayers[1]
+            let playersMarkers = playerOne!.fullName + " is X\n" + playerTwo!.fullName + "is O"
+            showInitialMessage(message: playersMarkers)
         }
     }
     
@@ -137,6 +139,10 @@ extension ViewController {
     
     func showGameEndedMessage() {
         MessageBuilder.showWarningMessage(titleMessage: "Game is over", bodyMessage: self.currentGameState.description)
+    }
+    
+    func showInitialMessage(message : String) {
+        MessageBuilder.showWarningMessage(titleMessage: "GO!", bodyMessage: message)
     }
     
     func hasGameEnded(currentCellState cellState: CellState, currentRow row: Int, currentColumn column: Int) -> Bool {
