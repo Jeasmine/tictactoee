@@ -13,6 +13,7 @@
 		800240EA1ED30DC200B2106A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800240E91ED30DC200B2106A /* ViewController.swift */; };
 		800240ED1ED30DC200B2106A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 800240EB1ED30DC200B2106A /* Main.storyboard */; };
 		800240F21ED30DC200B2106A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 800240F01ED30DC200B2106A /* LaunchScreen.storyboard */; };
+		8017E54D1EE05BEF00907C00 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8017E54C1EE05BEF00907C00 /* ArrayExtension.swift */; };
 		80AD07271EDF069E0013CCAD /* MessageBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AD07261EDF069E0013CCAD /* MessageBuilder.swift */; };
 		80AD07291EDF31200013CCAD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AD07281EDF31200013CCAD /* HomeViewController.swift */; };
 		80AD072B1EDF317B0013CCAD /* NewPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AD072A1EDF317B0013CCAD /* NewPlayerViewController.swift */; };
@@ -40,6 +41,7 @@
 		800240EC1ED30DC200B2106A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		800240F11ED30DC200B2106A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		800240F31ED30DC200B2106A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8017E54C1EE05BEF00907C00 /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		80AD07261EDF069E0013CCAD /* MessageBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageBuilder.swift; sourceTree = "<group>"; };
 		80AD07281EDF31200013CCAD /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		80AD072A1EDF317B0013CCAD /* NewPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPlayerViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			children = (
 				80CDD29E1EDB6BC000612639 /* Enums.swift */,
 				80AD07261EDF069E0013CCAD /* MessageBuilder.swift */,
+				8017E54C1EE05BEF00907C00 /* ArrayExtension.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				800240EA1ED30DC200B2106A /* ViewController.swift in Sources */,
 				80CEEC101EDE612C00E03723 /* Game.swift in Sources */,
 				80CDD29F1EDB6BC000612639 /* Enums.swift in Sources */,
+				8017E54D1EE05BEF00907C00 /* ArrayExtension.swift in Sources */,
 				8DDD7E021EE03A2D002A5B3B /* RankingViewCell.swift in Sources */,
 				80AD07271EDF069E0013CCAD /* MessageBuilder.swift in Sources */,
 				80AD072B1EDF317B0013CCAD /* NewPlayerViewController.swift in Sources */,

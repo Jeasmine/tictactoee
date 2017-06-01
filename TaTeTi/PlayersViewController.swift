@@ -4,8 +4,15 @@ import DZNEmptyDataSet
 class PlayersViewController: UITableViewController {
     
     let dataManager = PlayerLocalDataManager()
-    var players: [Player] = []
     let cellIdentifier = "player_cell"
+    let numberOfPlayers = 2
+    var players: [Player] = []
+    var selectedPlayers: [Player] = []
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.tableView.allowsMultipleSelection = true
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         do {
@@ -26,7 +33,44 @@ class PlayersViewController: UITableViewController {
             fatalError("The dequeued cell is not an instance of PlayerViewCell")
         }
         cell.playerName.text = players[indexPath.row].fullName
+        cell.accessoryType = cell.isSelected ? .checkmark : .none
+        cell.selectionStyle = .none
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let sr = tableView.indexPathsForSelectedRows, sr.count <= numberOfPlayers {
+            if let cell = tableView.cellForRow(at: indexPath), cell.isSelected {
+                cell.accessoryType = .checkmark
+                selectedPlayers.append(players[indexPath.row])
+            }
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath) {
+            cell.accessoryType = .none
+            selectedPlayers.remove(object: players[indexPath.row])
+        }
+    }
+}
+
+extension PlayersViewController {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "game_segue" ) {
+            let secondViewController = segue.destination as! ViewController
+            secondViewController.selectedPlayers = selectedPlayers
+        }
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if (selectedPlayers.count == 2) {
+            return true
+        }
+        
+        MessageBuilder.showErrorMessage(titleMessage: "Players needed!", bodyMessage: "You must select two players")
+        return false
     }
 }
 

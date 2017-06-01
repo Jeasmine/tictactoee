@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     var playerOne: Player?
     var playerTwo: Player?
     var arePlayerDefault = false
-    
+    var selectedPlayers: [Player] = []
     var currentGameState = GameState.PLAYING
     var currentPlayer = PlayerMark.X
     var boardGame = Array(repeating: Array(repeating: CellState.EMPTY, count: 3), count: 3)
@@ -104,6 +104,11 @@ class ViewController: UIViewController {
 extension ViewController {
     
     func initPlayers() {
+        if (selectedPlayers.count == 2) {
+            playerOne = selectedPlayers[0]
+            playerOne = selectedPlayers[1]
+        }
+        
         if (playerOne == nil || playerTwo == nil) {
             do {
                 try playerOne = dataManager.player(firstName: "Mother of cows", lastName: "")
