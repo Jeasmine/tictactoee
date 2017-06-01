@@ -19,7 +19,7 @@ class PlayersViewController: UITableViewController {
             players = try dataManager.retrievePlayerList()
             print(players)
         } catch {
-            print("Error retrieving players")
+            print(ERROR_RETRIEVING_PLAYERS)
         }
         self.tableView.reloadData()
     }
@@ -69,7 +69,7 @@ extension PlayersViewController {
             return true
         }
         
-        MessageBuilder.showErrorMessage(titleMessage: "Players needed!", bodyMessage: "You must select two players")
+        MessageBuilder.showErrorMessage(titleMessage: PLAYERS_NEEDED, bodyMessage: SELECT_PLAYERS)
         return false
     }
 }
@@ -81,8 +81,7 @@ extension PlayersViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate 
     }
     
     func title(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
-        let myString = "No data"
         let myAttribute = [ NSForegroundColorAttributeName: UIColor.purple ]
-        return NSAttributedString(string: myString, attributes: myAttribute)
+        return NSAttributedString(string: NO_PLAYERS, attributes: myAttribute)
     }
 }

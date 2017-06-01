@@ -17,7 +17,7 @@ class RankingViewController: UIViewController, UITableViewDelegate {
             topPlayers = try dataManager.retrieveRankingPlayerList()
             print(topPlayers)
         } catch {
-            print("Error retrieving players")
+            print(ERROR_RETRIEVING_PLAYERS)
         }
         self.tableView.reloadData()
     }
@@ -46,8 +46,7 @@ extension RankingViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate 
     }
     
     func title(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
-        let myString = "No data"
         let myAttribute = [ NSForegroundColorAttributeName: UIColor.blue ]
-        return NSAttributedString(string: myString, attributes: myAttribute)
+        return NSAttributedString(string: NO_PLAYERS, attributes: myAttribute)
     }
 }

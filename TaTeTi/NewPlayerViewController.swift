@@ -12,7 +12,7 @@ class NewPlayerViewController: UIViewController {
     
     @IBAction func onSaveClick(_ sender: Any) {
         guard let firstName = nameField.text, !firstName.isEmpty else {
-            MessageBuilder.showErrorMessage(titleMessage: "Field needed!", bodyMessage: "Name must not be empty")
+            MessageBuilder.showErrorMessage(titleMessage: FIELD_NEEDED, bodyMessage: NAME_EMPTY)
             return
         }
         var age = 0
@@ -23,7 +23,7 @@ class NewPlayerViewController: UIViewController {
             try dataManager.createPlayer(firstName: firstName, lastName: lastNameField.text, email: emailField.text, age: Int16(age))
             self.navigationController?.popViewController(animated: true)
         } catch {
-            MessageBuilder.showErrorMessage(titleMessage: "Error", bodyMessage: "Could not create player")
+            MessageBuilder.showErrorMessage(titleMessage: ERROR, bodyMessage: ERROR_CREATING_PLAYER)
         }
     }
 }
