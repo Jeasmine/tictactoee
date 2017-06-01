@@ -21,12 +21,10 @@ class ViewController: UIViewController {
      */
     var playerOne: Player?
     var playerTwo: Player?
-    var arePlayerDefault = false
     var selectedPlayers: [Player] = []
     var currentGameState = GameState.PLAYING
     var currentPlayer = PlayerMark.X
     var boardGame = Array(repeating: Array(repeating: CellState.EMPTY, count: 3), count: 3)
-    
     var dataManager = PlayerLocalDataManager()
     
     override func viewDidLoad() {
@@ -106,19 +104,7 @@ extension ViewController {
     func initPlayers() {
         if (selectedPlayers.count == 2) {
             playerOne = selectedPlayers[0]
-            playerOne = selectedPlayers[1]
-        }
-        
-        if (playerOne == nil || playerTwo == nil) {
-            do {
-                try playerOne = dataManager.player(firstName: "Mother of cows", lastName: "")
-                try playerTwo = dataManager.player(firstName: "Junior cow", lastName: "")
-                print(playerOne!)
-                print(playerTwo!)
-            } catch {
-                MessageBuilder.showWarningMessage(titleMessage: "Could not init players", bodyMessage: self.currentGameState.description)
-            }
-            arePlayerDefault = true
+            playerTwo = selectedPlayers[1]
         }
     }
     
@@ -134,8 +120,10 @@ extension ViewController {
     }
     
     func endGameLogic() {
+        boardGame = Array(repeating: Array(repeating: CellState.EMPTY, count: 3), count: 3)
+        resetButtons()
         showGameEndedMessage()
-        if (!arePlayerDefault) {
+        if (playerOne != nil && playerTwo != nil) {
             do {
                 let game = try dataManager.createGame(playerX: playerOne!, playerO: playerTwo!, gameState: currentGameState)
                 print(game)
@@ -149,7 +137,6 @@ extension ViewController {
     
     func showGameEndedMessage() {
         MessageBuilder.showWarningMessage(titleMessage: "Game is over", bodyMessage: self.currentGameState.description)
-        resetButtons()
     }
     
     func hasGameEnded(currentCellState cellState: CellState, currentRow row: Int, currentColumn column: Int) -> Bool {
