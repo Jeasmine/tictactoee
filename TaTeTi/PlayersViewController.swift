@@ -17,6 +17,7 @@ class PlayersViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         do {
+            selectedPlayers = []
             players = try dataManager.retrievePlayerList()
         } catch {
             fatalError(ERROR_RETRIEVING_PLAYERS)
