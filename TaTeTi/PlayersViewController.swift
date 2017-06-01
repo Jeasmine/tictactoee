@@ -17,9 +17,8 @@ class PlayersViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         do {
             players = try dataManager.retrievePlayerList()
-            print(players)
         } catch {
-            print(ERROR_RETRIEVING_PLAYERS)
+            fatalError(ERROR_RETRIEVING_PLAYERS)
         }
         self.tableView.reloadData()
     }
@@ -65,12 +64,15 @@ extension PlayersViewController {
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        if (selectedPlayers.count == 2) {
-            return true
+        if (identifier == "game_segue" ) {
+            if (selectedPlayers.count == 2) {
+                return true
+            }
+            
+            MessageBuilder.showErrorMessage(titleMessage: PLAYERS_NEEDED, bodyMessage: SELECT_PLAYERS)
+            return false
         }
-        
-        MessageBuilder.showErrorMessage(titleMessage: PLAYERS_NEEDED, bodyMessage: SELECT_PLAYERS)
-        return false
+        return true
     }
 }
 

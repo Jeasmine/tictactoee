@@ -15,9 +15,8 @@ class RankingViewController: UIViewController, UITableViewDelegate {
     override func viewWillAppear(_ animated: Bool) {
         do {
             topPlayers = try dataManager.retrieveRankingPlayerList()
-            print(topPlayers)
         } catch {
-            print(ERROR_RETRIEVING_PLAYERS)
+            fatalError(ERROR_RETRIEVING_PLAYERS)
         }
         self.tableView.reloadData()
     }
