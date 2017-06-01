@@ -232,7 +232,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1281" y="64"/>
+            <point key="canvasLocation" x="1307" y="836"/>
         </scene>
         <!--New Player View Controller-->
         <scene sceneID="Z3N-v0-XLf">
@@ -316,7 +316,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S4o-ET-f4y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2235" y="64"/>
+            <point key="canvasLocation" x="306" y="1589"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="5MC-C6-cEY">
@@ -391,17 +391,23 @@
                             <constraint firstItem="Sjy-2y-9Nq" firstAttribute="top" secondItem="CCi-RR-bR9" secondAttribute="bottom" id="XfR-AN-ro3"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ixg-Cq-TpW"/>
+                    <navigationItem key="navigationItem" id="ixg-Cq-TpW">
+                        <barButtonItem key="rightBarButtonItem" title="Ranking" id="Dvy-Ls-NYx">
+                            <connections>
+                                <segue destination="YeK-2X-PgR" kind="show" id="8qA-fV-hW5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XGa-EB-cJd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="430" y="64"/>
+            <point key="canvasLocation" x="1306" y="-13"/>
         </scene>
         <!--Empty Data Set Delegate-->
         <scene sceneID="YHj-K9-GNd">
             <objects>
                 <tableViewController id="8DE-Dm-0JU" customClass="PlayersViewController" customModule="MuTicTacToe" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="dmY-eJ-xRb">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="dmY-eJ-xRb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -410,7 +416,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gmn-hV-abz" id="BbO-Cr-PXm" customClass="PlayerViewCell" customModule="MuTicTacToe" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="59.666666666666664"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="59.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Sq-ou-mgr">
@@ -438,7 +444,7 @@
                             <outlet property="emptyDataSetSource" destination="8DE-Dm-0JU" id="9NW-rv-YJ7"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="🐮 Players  🐮" id="A0B-Zh-qjj">
+                    <navigationItem key="navigationItem" id="A0B-Zh-qjj">
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="OYI-IL-NNv">
                                 <connections>
@@ -455,12 +461,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PGC-hD-3Vi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="428.98550724637687" y="779.34782608695662"/>
+            <point key="canvasLocation" x="307" y="836"/>
         </scene>
         <!--Empty Data Set Delegate-->
         <scene sceneID="8br-Vh-uwc">
             <objects>
-                <viewController id="YeK-2X-PgR" customClass="HomeViewController" customModule="MuTicTacToe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="YeK-2X-PgR" customClass="RankingViewController" customModule="MuTicTacToe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WTT-vJ-BGG"/>
                         <viewControllerLayoutGuide type="bottom" id="RgI-iZ-Tex"/>
@@ -472,6 +478,40 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BER-0B-u02">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ranking_cell" rowHeight="60" id="0cn-tA-Iwg" customClass="RankingViewCell" customModule="MuTicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0cn-tA-Iwg" id="3sH-1U-ukg">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="59.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ranking Player Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8As-pw-jMj">
+                                                    <rect key="frame" x="20" y="19.333333333333336" width="162" height="21.000000000000007"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ranking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZJ-Ay-8RK">
+                                                    <rect key="frame" x="332.33333333333326" y="19.333333333333336" width="61.666666666666686" height="21.000000000000007"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="8As-pw-jMj" firstAttribute="centerY" secondItem="3sH-1U-ukg" secondAttribute="centerY" id="OHT-ls-Esn"/>
+                                                <constraint firstItem="gZJ-Ay-8RK" firstAttribute="centerY" secondItem="3sH-1U-ukg" secondAttribute="centerY" id="dU5-hh-Hql"/>
+                                                <constraint firstItem="8As-pw-jMj" firstAttribute="leading" secondItem="3sH-1U-ukg" secondAttribute="leading" constant="20" symbolic="YES" id="fdE-xM-HLA"/>
+                                                <constraint firstAttribute="trailing" secondItem="gZJ-Ay-8RK" secondAttribute="trailing" constant="20" symbolic="YES" id="hd2-wT-1Xs"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="playerRanking" destination="gZJ-Ay-8RK" id="e6J-Wa-PF4"/>
+                                            <outlet property="rankingPlayerName" destination="8As-pw-jMj" id="QDf-3Y-CsU"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="YeK-2X-PgR" id="5UU-Pj-gzq"/>
                                     <outlet property="delegate" destination="YeK-2X-PgR" id="p84-be-cOG"/>
@@ -489,12 +529,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="BER-0B-u02" id="xqH-ik-orp"/>
+                        <outlet property="tableView" destination="BER-0B-u02" id="UaN-JT-XvV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bsO-3D-4af" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2182.608695652174" y="734.51086956521749"/>
+            <point key="canvasLocation" x="2357.971014492754" y="835.59782608695662"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Rah-Na-DWB">
@@ -513,7 +553,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zF6-tk-ww6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-393" y="64"/>
+            <point key="canvasLocation" x="-394" y="-13"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

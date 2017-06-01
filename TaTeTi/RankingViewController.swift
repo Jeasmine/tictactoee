@@ -1,44 +1,45 @@
-import Foundation
-
 import UIKit
-import SwiftMessages
 import DZNEmptyDataSet
 
 class RankingViewController: UIViewController, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
+    let dataManager = PlayerLocalDataManager()
+    var topPlayers: [Player] = []
+    let rankingCellIdentifier = "ranking_cell"
     
     override func viewDidLoad() {
         tableView.tableFooterView = UIView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        SwiftMessages.show {
-            let view = MessageView.viewFromNib(layout: .CardView)
-            view.configureTheme(.warning)
-            view.configureDropShadow()
-            let iconText = ["🤔", "😳", "🙄", "😶"].sm_random()!
-            view.configureContent(title: "Warning", body: "Consider yourself warned.", iconText: iconText)
-
-            return view
+        do {
+            topPlayers = try dataManager.retrieveRankingPlayerList()
+            print(topPlayers)
+        } catch {
+            print("Error retrieving players")
         }
+        self.tableView.reloadData()
     }
 }
 
-extension HomeViewController: UITableViewDataSource {
+extension RankingViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return topPlayers.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: rankingCellIdentifier, for:indexPath) as? RankingViewCell else {
+            fatalError("The dequeued cell is not an instance of RankingViewCell")
+        }
+        cell.rankingPlayerName.text = topPlayers[indexPath.row].fullName
+        cell.playerRanking.text = String(topPlayers[indexPath.row].ranking)
+        return cell
     }
 }
 
-extension HomeViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
+extension RankingViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
  
     func image(forEmptyDataSet scrollView: UIScrollView!) -> UIImage! {
         return UIImage(named: "emptyData")

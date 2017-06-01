@@ -27,6 +27,7 @@
 		80CEEC0E1EDE44A900E03723 /* Player+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CEEC0D1EDE44A900E03723 /* Player+CoreData.swift */; };
 		80CEEC101EDE612C00E03723 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CEEC0F1EDE612C00E03723 /* Game.swift */; };
 		80CEEC121EDE617900E03723 /* Game+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CEEC111EDE617900E03723 /* Game+CoreData.swift */; };
+		8DDD7E021EE03A2D002A5B3B /* RankingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDD7E001EE03A2D002A5B3B /* RankingViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		80CEEC0D1EDE44A900E03723 /* Player+CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Player+CoreData.swift"; sourceTree = "<group>"; };
 		80CEEC0F1EDE612C00E03723 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		80CEEC111EDE617900E03723 /* Game+CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Game+CoreData.swift"; sourceTree = "<group>"; };
+		8DDD7E001EE03A2D002A5B3B /* RankingViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingViewCell.swift; sourceTree = "<group>"; };
 		A19DD6DE3307125B121007FF /* Pods_TaTeTi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaTeTi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				80BFC8451EDC485C00EE4532 /* RankingViewController.swift */,
+				8DDD7E001EE03A2D002A5B3B /* RankingViewCell.swift */,
 			);
 			name = Ranking;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				800240EA1ED30DC200B2106A /* ViewController.swift in Sources */,
 				80CEEC101EDE612C00E03723 /* Game.swift in Sources */,
 				80CDD29F1EDB6BC000612639 /* Enums.swift in Sources */,
+				8DDD7E021EE03A2D002A5B3B /* RankingViewCell.swift in Sources */,
 				80AD07271EDF069E0013CCAD /* MessageBuilder.swift in Sources */,
 				80AD072B1EDF317B0013CCAD /* NewPlayerViewController.swift in Sources */,
 				800240E81ED30DC200B2106A /* AppDelegate.swift in Sources */,
