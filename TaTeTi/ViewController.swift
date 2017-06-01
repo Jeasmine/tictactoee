@@ -105,7 +105,7 @@ extension ViewController {
         if (selectedPlayers.count == 2) {
             playerOne = selectedPlayers[0]
             playerTwo = selectedPlayers[1]
-            let playersMarkers = playerOne!.fullName + " is X\n" + playerTwo!.fullName + "is O"
+            let playersMarkers = playerOne!.fullName + " is X\n" + playerTwo!.fullName + " is O"
             showInitialMessage(message: playersMarkers)
         }
     }
@@ -127,10 +127,8 @@ extension ViewController {
         showGameEndedMessage()
         if (playerOne != nil && playerTwo != nil) {
             do {
-                let game = try dataManager.createGame(playerX: playerOne!, playerO: playerTwo!, gameState: currentGameState)
-                print(game)
-                let players = try dataManager.retrieveRankingPlayerList()
-                print (players)
+                _ = try dataManager.createGame(playerX: playerOne!, playerO: playerTwo!, gameState: currentGameState)
+                _ = try dataManager.retrieveRankingPlayerList()
             } catch {
                 print("Could not save game")
             }
