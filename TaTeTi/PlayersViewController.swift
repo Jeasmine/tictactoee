@@ -13,6 +13,7 @@ class PlayersViewController: UITableViewController {
         super.viewDidLoad()
         self.tableView.allowsMultipleSelection = true
         self.tableView.tableFooterView = UIView()
+        self.navigationItem.rightBarButtonItems?.first?.accessibilityLabel = "createPlayerAL"
     }
     
     override func viewWillAppear(_ animated: Bool) {

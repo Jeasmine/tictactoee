@@ -15,6 +15,7 @@
 		800240F21ED30DC200B2106A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 800240F01ED30DC200B2106A /* LaunchScreen.storyboard */; };
 		8017E54D1EE05BEF00907C00 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8017E54C1EE05BEF00907C00 /* ArrayExtension.swift */; };
 		8017E54F1EE065C400907C00 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8017E54E1EE065C400907C00 /* Constants.swift */; };
+		80814D791EE58113009F8245 /* MuTicTacToeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80814D781EE58113009F8245 /* MuTicTacToeUITests.swift */; };
 		80AD07271EDF069E0013CCAD /* MessageBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AD07261EDF069E0013CCAD /* MessageBuilder.swift */; };
 		80AD07291EDF31200013CCAD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AD07281EDF31200013CCAD /* HomeViewController.swift */; };
 		80AD072B1EDF317B0013CCAD /* NewPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AD072A1EDF317B0013CCAD /* NewPlayerViewController.swift */; };
@@ -32,6 +33,16 @@
 		8DDD7E021EE03A2D002A5B3B /* RankingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDD7E001EE03A2D002A5B3B /* RankingViewCell.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		80814D7B1EE58113009F8245 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 800240DC1ED30DC200B2106A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 800240E31ED30DC200B2106A;
+			remoteInfo = MuTicTacToe;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		5439CC434BA28985433477FA /* Pods-TaTeTi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaTeTi.release.xcconfig"; path = "Pods/Target Support Files/Pods-TaTeTi/Pods-TaTeTi.release.xcconfig"; sourceTree = "<group>"; };
 		66136D10440371C1F7C9DAFC /* Pods-TaTeTi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaTeTi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TaTeTi/Pods-TaTeTi.debug.xcconfig"; sourceTree = "<group>"; };
@@ -44,6 +55,9 @@
 		800240F31ED30DC200B2106A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8017E54C1EE05BEF00907C00 /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		8017E54E1EE065C400907C00 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		80814D761EE58113009F8245 /* MuTicTacToeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuTicTacToeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		80814D781EE58113009F8245 /* MuTicTacToeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuTicTacToeUITests.swift; sourceTree = "<group>"; };
+		80814D7A1EE58113009F8245 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80AD07261EDF069E0013CCAD /* MessageBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageBuilder.swift; sourceTree = "<group>"; };
 		80AD07281EDF31200013CCAD /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		80AD072A1EDF317B0013CCAD /* NewPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPlayerViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +82,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				26CEADAD3EFE5F28836B8CE2 /* Pods_TaTeTi.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80814D731EE58113009F8245 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				800240E61ED30DC200B2106A /* TaTeTi */,
+				80814D771EE58113009F8245 /* MuTicTacToeUITests */,
 				800240E51ED30DC200B2106A /* Products */,
 				8ECBA1466CBE7F97FEC31631 /* Pods */,
 				B3BB7A88F9B6A913975B15CF /* Frameworks */,
@@ -130,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				800240E41ED30DC200B2106A /* MuTicTacToe.app */,
+				80814D761EE58113009F8245 /* MuTicTacToeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -148,6 +171,15 @@
 				800052071EDF5EC400B800F0 /* Players View */,
 			);
 			path = TaTeTi;
+			sourceTree = "<group>";
+		};
+		80814D771EE58113009F8245 /* MuTicTacToeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				80814D781EE58113009F8245 /* MuTicTacToeUITests.swift */,
+				80814D7A1EE58113009F8245 /* Info.plist */,
+			);
+			path = MuTicTacToeUITests;
 			sourceTree = "<group>";
 		};
 		80CDD29D1EDB6B9600612639 /* Utils */ = {
@@ -234,6 +266,24 @@
 			productReference = 800240E41ED30DC200B2106A /* MuTicTacToe.app */;
 			productType = "com.apple.product-type.application";
 		};
+		80814D751EE58113009F8245 /* MuTicTacToeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80814D7F1EE58113009F8245 /* Build configuration list for PBXNativeTarget "MuTicTacToeUITests" */;
+			buildPhases = (
+				80814D721EE58113009F8245 /* Sources */,
+				80814D731EE58113009F8245 /* Frameworks */,
+				80814D741EE58113009F8245 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				80814D7C1EE58113009F8245 /* PBXTargetDependency */,
+			);
+			name = MuTicTacToeUITests;
+			productName = MuTicTacToeUITests;
+			productReference = 80814D761EE58113009F8245 /* MuTicTacToeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -248,6 +298,12 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = ZYXCB6QKKT;
 						ProvisioningStyle = Automatic;
+					};
+					80814D751EE58113009F8245 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = ZYXCB6QKKT;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 800240E31ED30DC200B2106A;
 					};
 				};
 			};
@@ -265,6 +321,7 @@
 			projectRoot = "";
 			targets = (
 				800240E31ED30DC200B2106A /* MuTicTacToe */,
+				80814D751EE58113009F8245 /* MuTicTacToeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -277,6 +334,13 @@
 				800240F21ED30DC200B2106A /* LaunchScreen.storyboard in Resources */,
 				80BFC8481EDC49E300EE4532 /* Assets.xcassets in Resources */,
 				800240ED1ED30DC200B2106A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80814D741EE58113009F8245 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,7 +421,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		80814D721EE58113009F8245 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80814D791EE58113009F8245 /* MuTicTacToeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		80814D7C1EE58113009F8245 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 800240E31ED30DC200B2106A /* MuTicTacToe */;
+			targetProxy = 80814D7B1EE58113009F8245 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		800240EB1ED30DC200B2106A /* Main.storyboard */ = {
@@ -500,6 +580,32 @@
 			};
 			name = Release;
 		};
+		80814D7D1EE58113009F8245 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = ZYXCB6QKKT;
+				INFOPLIST_FILE = MuTicTacToeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.workshop.jeasmine.ios.MuTicTacToeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = MuTicTacToe;
+			};
+			name = Debug;
+		};
+		80814D7E1EE58113009F8245 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = ZYXCB6QKKT;
+				INFOPLIST_FILE = MuTicTacToeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.workshop.jeasmine.ios.MuTicTacToeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = MuTicTacToe;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -520,6 +626,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		80814D7F1EE58113009F8245 /* Build configuration list for PBXNativeTarget "MuTicTacToeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80814D7D1EE58113009F8245 /* Debug */,
+				80814D7E1EE58113009F8245 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 
